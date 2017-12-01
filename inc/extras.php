@@ -98,7 +98,7 @@ function lens_setup_author() {
 	global $wp_query;
 
 	if ( $wp_query->is_author() && isset( $wp_query->post ) ) {
-		$GLOBALS['authordata'] = get_userdata( $wp_query->post->post_author );
+//		$GLOBALS['authordata'] = get_userdata( $wp_query->post->post_author );
 	}
 }
 add_action( 'wp', 'lens_setup_author' );
