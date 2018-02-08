@@ -12,11 +12,11 @@ get_header(); ?>
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'lens' ); ?></h1>
+					<h3 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'lens' ); ?></h3>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'lens' ); ?></p>
+					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'lens' ); ?></p>
 
 					<?php get_search_form(); ?>
 
@@ -24,7 +24,7 @@ get_header(); ?>
 
 					<?php if ( lens_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
 					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php _e( 'Most Used Categories', 'lens' ); ?></h2>
+						<h3 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'lens' ); ?></h3>
 						<ul>
 						<?php
 							wp_list_categories( array(

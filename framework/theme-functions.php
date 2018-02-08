@@ -3,8 +3,12 @@
  * @package lens, Copyright Rohit Tripathi, rohitink.com
  * This file contains Custom Theme Related Functions.
  */
- 
- 
+//Import Admin Modules
+require get_template_directory() . '/framework/admin_modules/register_styles.php';
+require get_template_directory() . '/framework/admin_modules/register_widgets.php';
+require get_template_directory() . '/framework/admin_modules/theme_setup.php';
+require get_template_directory() . '/framework/admin_modules/excerpt_length.php';
+
 class Lens_Menu_With_Description extends Walker_Nav_Menu {
 	function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
 		global $wp_query;
@@ -112,7 +116,7 @@ function lens_load_sidebar() {
 **	Determining Sidebar and Primary Width
 */
 function lens_primary_class() {
-	$sw = get_theme_mod('lens_sidebar_width',4);
+	$sw = esc_html(get_theme_mod('lens_sidebar_width',4));
 	$class = "col-md-".(12-$sw);
 	
 	if ( !lens_load_sidebar() ) 
@@ -123,7 +127,7 @@ function lens_primary_class() {
 add_action('lens_primary-width', 'lens_primary_class');
 
 function lens_secondary_class() {
-	$sw = get_theme_mod('lens_sidebar_width',4);
+	$sw = esc_html(get_theme_mod('lens_sidebar_width',4));
 	$class = "col-md-".$sw;
 	
 	echo $class;

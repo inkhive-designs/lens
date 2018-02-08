@@ -1,5 +1,16 @@
 ChangeLog
 =========
+Version: 1.0.4
+
+    i) Added more social icons.
+    ii) Added Skins.
+    iii) Added custom logo and site title and description minor bug fixed.
+    iv) Blog Layout bug fixed.
+    v) Modify Mobile Menu.
+    vi) Showcase bug fixed.
+    v) Minimize Control Panel.
+    vi) Header Image bug fixed.
+
 
 VERSION 1.0.3
     ii) Header Image Bug fixed.

@@ -18,7 +18,7 @@ function lens_paging_nav() {
 	}
 	?>
 	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'lens' ); ?></h1>
+		<h3 class="screen-reader-text"><?php ecs_html_e( 'Posts navigation', 'lens' ); ?></h3>
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
@@ -49,7 +49,7 @@ function lens_post_nav() {
 	}
 	?>
 	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'lens' ); ?></h1>
+		<h3 class="screen-reader-text"><?php ecs_html_e( 'Post navigation', 'lens' ); ?></h3>
 		<div class="nav-links">
 			<?php
 				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'lens' ) );
@@ -281,7 +281,7 @@ function lens_comment( $comment, $args, $depth ) {
 
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
 		<div class="comment-body">
-			<?php _e( 'Pingback:', 'lens' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'lens' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php ecs_html_e( 'Pingback:', 'lens' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'lens' ), '<span class="edit-link">', '</span>' ); ?>
 		</div>
 
 	<?php else : ?>
@@ -302,7 +302,7 @@ function lens_comment( $comment, $args, $depth ) {
 				</div><!-- .comment-metadata -->
 
 				<?php if ( '0' == $comment->comment_approved ) : ?>
-				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'lens' ); ?></p>
+				<p class="comment-awaiting-moderation"><?php ecs_html_e( 'Your comment is awaiting moderation.', 'lens' ); ?></p>
 				<?php endif; ?>
 			</footer><!-- .comment-meta -->
 

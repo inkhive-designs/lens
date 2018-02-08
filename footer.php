@@ -14,7 +14,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info container">
-			<?php printf( __( 'Powered By by %1$s.', 'lens' ), '<a href="'.esc_url("https://rohitink.com/2015/05/02/lens-photography-theme/").'" rel="nofollow">Lens Theme</a>' ); ?>
+			<?php printf( __( 'Powered By by %1$s.', 'lens' ), '<a target= "blank" href="'.esc_url("inkhive.com").'" rel="nofollow">Inkhive Themes</a>' ); ?>
 			<?php echo ( get_theme_mod('lens_footer_text') == '' ) ? ('&copy; '.date('Y').' '.get_bloginfo('name').__('. All Rights Reserved. ','lens') ) : esc_html( get_theme_mod('lens_footer_text') ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

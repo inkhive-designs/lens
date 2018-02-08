@@ -1,11 +1,11 @@
-<?php if ( get_theme_mod('lens_main_aboutme_enable') && is_front_page() ) : ?>
+<?php if ( get_theme_mod('lens_main_aboutme_enable')) : ?>
 	<div id="aboutme">
 		<div class="layer">
 			<div class="container">
 				<div id="aboutme-title" class="section-title"><?php echo esc_html( get_theme_mod('lens_aboutme_title','About Me') ) ?></div>
 				
 				<div class="author col-md-3">
-					<img src="<?php echo get_theme_mod('lens_aboutme_img') ?>">
+					<img src="<?php echo esc_html(get_theme_mod('lens_aboutme_img')) ?>">
 					<div class="author-name title-font"><?php echo esc_html( get_theme_mod('lens_aboutme_name') ) ?></div>
 				</div>
 				

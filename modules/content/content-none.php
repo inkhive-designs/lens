@@ -10,7 +10,7 @@
 
 <section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php _e( 'Nothing Found', 'lens' ); ?></h1>
+		<h1 class="page-title"><?php ecs_html_e( 'Nothing Found', 'lens' ); ?></h1>
 	</header><!-- .page-header -->
 
 	<div class="page-content">
@@ -20,12 +20,12 @@
 
 		<?php elseif ( is_search() ) : ?>
 
-			<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'lens' ); ?></p>
+			<p><?php ecs_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'lens' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php else : ?>
 
-			<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'lens' ); ?></p>
+			<p><?php ecs_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'lens' ); ?></p>
 			<?php get_search_form(); ?>
 
 		<?php endif; ?>

@@ -8,14 +8,14 @@
 	<div class="card">
 		<div class="featured-thumb front">
 			<?php if (has_post_thumbnail()) : ?>	
-				<a href="<?php the_permalink() ?>" title="<?php the_title() ?>"><?php the_post_thumbnail('photo-thumb'); ?></a>
+				<a href="<?php the_permalink() ?>" title="<?php the_title() ?>"><?php the_post_thumbnail('photo-thumb',array(  'alt' => trim(strip_tags( $post->post_title )))); ?></a>
 			<?php else: ?>
-				<a href="<?php the_permalink() ?>" title="<?php the_title() ?>"><img src="<?php echo get_template_directory_uri()."/assets/images/placeholder2.jpg"; ?>"></a>
+				<a href="<?php the_permalink() ?>" title="<?php the_title() ?>"><img alt="<?php the_title() ?>" src="<?php echo get_template_directory_uri()."/assets/images/placeholder2.jpg"; ?>"></a>
 			<?php endif; ?>
 			
 			<div class="out-thumb back">
 					<header class="entry-header">
-						<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+						<h3 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 					</header><!-- .entry-header -->
 				</div><!--.out-thumb-->
 			</div>	

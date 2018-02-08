@@ -32,6 +32,15 @@ function lens_custom_header_setup() {
 		'admin-head-callback'    => 'lens_admin_header_style',
 		'admin-preview-callback' => 'lens_admin_header_image',
 	) ) );
+
+	register_default_headers( array(
+			'default-image'    => array(
+				'url'            => '%s/assets/images/houses-691585_1280.jpg',
+				'thumbnail_url'    => '%s/assets/images/houses-691585_1280.jpg',
+				'description'    => __('Default Header Image', 'lens')
+			)
+		)
+	);
 }
 add_action( 'after_setup_theme', 'lens_custom_header_setup' );
 
@@ -46,9 +55,9 @@ function lens_header_style() {
 	<style>
 	#masthead {
 			background-image: url(<?php header_image(); ?>);
-			background-size: <?php echo get_theme_mod('lens_himg_style','cover'); ?>;
-			background-position-x: <?php echo get_theme_mod('lens_himg_align','center'); ?>;
-			background-repeat: <?php echo  get_theme_mod('lens_himg_repeat') ? "repeat" : "no-repeat" ?>;
+			background-size: <?php echo esc_html(get_theme_mod('lens_himg_style','cover')); ?>;
+			background-position-x: <?php echo esc_html(get_theme_mod('lens_himg_align','center')); ?>;
+			background-repeat: <?php echo  esc_html(get_theme_mod('lens_himg_repeat')) ? "repeat" : "no-repeat" ?>;
 		}
 	</style>	
 	<?php
@@ -96,7 +105,7 @@ function lens_admin_header_image() {
 		<h1 class="displaying-header-text"><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 		<div class="displaying-header-text" id="desc"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
 		<?php if ( get_header_image() ) : ?>
-		<img src="<?php header_image(); ?>" alt="">
+		<img src="<?php header_image(); ?>">
 		<?php endif; ?>
 	</div>
 <?php

@@ -10,6 +10,15 @@ jQuery(document).ready( function() {
 	var elem =  jQuery('#infinite-handle').detach();
 	jQuery('#main').append(elem);
 
+
+    jQuery('.menu-link').bigSlide(
+        {
+            easyClose:true,
+            'side': 'left',
+            'speed': '550',
+            'menuWidth': '50%',
+        }
+    );
 });  
 
 // Handle new items appended by infinite scroll
