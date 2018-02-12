@@ -69,6 +69,12 @@ function lens_custom_css_mods() {
 		echo "#masthead #site-logo img { transform: scale(".$val."); -webkit-transform: scale(".$val."); -moz-transform: scale(".$val."); -ms-transform: scale(".$val."); }";
 		endif;
 
+	if(get_theme_mod('lens_aboutme_img') == ''):
+		echo "#aboutme .about{ width: 100%}";
+		echo "#aboutme .about{ text-align:center; }";
+		endif;
+
+
 	echo "</style>";
 }
 
