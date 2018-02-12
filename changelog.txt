@@ -4,6 +4,11 @@ Version: 1.0.6
 
     i) About me section minor bug fixed.
 
+
+Version: 1.0.5
+
+    i) About me section minor bug fixed and other bug fixed.
+
 Version: 1.0.4
 
     i) Added more social icons.
