@@ -1,6 +1,6 @@
 ChangeLog
 =========
-Version: 1.0.5
+Version: 1.0.6
 
     i) About me section minor bug fixed.
 
